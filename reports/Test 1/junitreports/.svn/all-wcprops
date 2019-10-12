@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/quepio/!svn/ver/34034/QA/NewUIAutomation/reports/Test%201/junitreports
+END
+TEST-com.automation.regressionsuite.SurveyEndToEndTest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/quepio/!svn/ver/34034/QA/NewUIAutomation/reports/Test%201/junitreports/TEST-com.automation.regressionsuite.SurveyEndToEndTest.xml
+END
+TEST-com.automation.regressionsuite.ModuleEndToEndTest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/quepio/!svn/ver/34034/QA/NewUIAutomation/reports/Test%201/junitreports/TEST-com.automation.regressionsuite.ModuleEndToEndTest.xml
+END
+TEST-com.automation.regressionsuite.GeneralSanityAllLinksTest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/quepio/!svn/ver/34034/QA/NewUIAutomation/reports/Test%201/junitreports/TEST-com.automation.regressionsuite.GeneralSanityAllLinksTest.xml
+END
+TEST-com.automation.regressionsuite.ProcessEndToEndTest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/quepio/!svn/ver/34034/QA/NewUIAutomation/reports/Test%201/junitreports/TEST-com.automation.regressionsuite.ProcessEndToEndTest.xml
+END
+TEST-com.automation.regressionsuite.TalkTest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/quepio/!svn/ver/34034/QA/NewUIAutomation/reports/Test%201/junitreports/TEST-com.automation.regressionsuite.TalkTest.xml
+END
+TEST-com.automation.regressionsuite.LoginTest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/quepio/!svn/ver/34034/QA/NewUIAutomation/reports/Test%201/junitreports/TEST-com.automation.regressionsuite.LoginTest.xml
+END

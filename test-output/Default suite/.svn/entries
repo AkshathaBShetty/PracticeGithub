@@ -1,0 +1,88 @@
+10
+
+dir
+34409
+http://203.92.58.115/quepio/QA/NewUIAutomation/test-output/Default%20suite
+http://203.92.58.115/quepio
+
+
+
+2019-01-28T10:12:47.241592Z
+34048
+swetha
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+222d10a2-318d-a846-bcd6-30e642a51d8c
+
+Default test.html
+file
+
+
+
+
+
+250c47ecac4d109a0b326f687bee921d
+2019-01-28T10:12:47.241592Z
+34048
+swetha
+
+
+
+
+
+Default test.html.r34035
+Default test.html.r34052
+Default test.html.mine
+
+Default test.xml
+file
+
+
+
+
+
+8350410dfc00a0753bbc4214fdd73789
+2019-01-28T10:12:47.241592Z
+34048
+swetha
+
+
+
+
+
+Default test.xml.r34035
+Default test.xml.r34052
+Default test.xml.mine
+
+testng-failed.xml
+file
+
+
+
+
+
+d7581eebd90ad04996256c143be89739
+2019-01-28T10:12:47.241592Z
+34048
+swetha
+
+
+
+
+
+testng-failed.xml.r34035
+testng-failed.xml.r34052
+testng-failed.xml.mine
+

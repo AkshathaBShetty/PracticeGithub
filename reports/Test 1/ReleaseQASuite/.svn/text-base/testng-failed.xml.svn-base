@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ReleaseQASuite]">
+  <test name="RegressionTest(failed)">
+    <classes>
+      <class name="com.automation.regressionsuite.TalkTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verifyTalkOnSocialPage"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.automation.regressionsuite.TalkTest -->
+    </classes>
+  </test> <!-- RegressionTest(failed) -->
+</suite> <!-- Failed suite [ReleaseQASuite] -->

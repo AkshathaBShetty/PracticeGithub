@@ -1,0 +1,278 @@
+package com.automation.platform;
+
+import static com.automation.common.Utilities.driver;
+import static com.automation.common.Utilities.pauseForTime;
+
+import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import com.automation.common.Utilities;
+import static com.automation.common.Utilities.waitForElement;
+import java.io.IOException;
+import java.util.List;
+
+
+public class Approval {
+Logger log=Logger.getLogger(Approval.class);
+Login login = new Login(driver);
+String HomePageApproval="Auto web HomePage Approval";
+String ApprovalDes="This is an automated approval";
+String Owner="Owner Comment";
+char[] Autouser= {'A','n','u','j','a' ,' ','S','w','e'};
+
+
+ @FindBy(xpath="//div[text()='Home']")
+ WebElement HomeIcon;
+ @FindBy(id="close-flash-popup")
+ WebElement FlashPlayer;
+ @FindBy(xpath="/html[1]/body[1]/div[18]/div[2]/div[4]/div[3]/div[2]/div[1]/div[1]/div[4]/div[1]")
+ WebElement PlusIcon;
+ @FindBy(xpath="//div[text()='To Do']")
+ WebElement ToDoIcon;
+ @FindBy(id="plusIconContainer")
+ WebElement Create;
+ @FindBy(css="#new-appr")
+ WebElement NewApproval;
+ @FindBy(css="input[placeholder='Approval name']")
+ WebElement ApprovalName;
+ @FindBy(css="textarea[placeholder='Details of the Approval. Attach files if needed.']")
+ WebElement ApprovalDescription;
+ @FindBy(css="#createApprovalForm > div > div:nth-child(3) > div.header-input-rp-wrap > label")
+ WebElement UploadFile;
+ @FindBy(id="search-name-popup-approval")
+ WebElement SelectApprover;
+ @FindBy(xpath="//div[text()='Ashushet 123 ']")
+ WebElement Fav;
+ @FindBy(id="search-res-text-approval")
+ WebElement Autosug;
+ @FindBy(css="div[class='create-approval-button']")
+ WebElement SaveApproval;
+ @FindBy(id="rpwo-sec")
+ WebElement Pendinglist;
+ @FindBy(xpath="html[1]/body[1]/div[3]/div[20]/div[4]/div[7]/div[3]/div[1]/div[1]/div[2]")
+ WebElement Approvalclick;
+ @FindBy(xpath="//div[@class='jq-toast-single jq-has-icon jq-icon-success']")
+ WebElement Successmessage;
+ @FindBy(xpath="//div[text()='APPROVAL']")
+ WebElement Clickonapproval;
+ @FindBy(xpath="//textarea[@placeholder='Enter your comments here']")
+ WebElement ToDocomment;
+ @FindBy(xpath="//button[text()='Comment']")
+ WebElement Clickcomment;
+ WebDriverWait d=new WebDriverWait(driver,80);
+ 
+  
+ public Approval(WebDriver driver) {
+		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 30),this);
+	 }
+ 
+ @SuppressWarnings("unchecked")
+public WebDriver CreateApproval(Boolean isHome,Boolean isAttachmentPresent,String filepath,Boolean isfavpresent,Boolean iscommentrequired ) throws IOException, InterruptedException {
+	if(isHome) 
+	{
+	 try {
+		 pauseForTime(8000);
+		 if(waitForElement(HomeIcon,60).isDisplayed()) {
+			 HomeIcon.click();
+			 }
+		 }
+	 
+	 catch(NoSuchElementException ex){
+		 log.error("HomeIcon is not found on the page"); 
+	 }
+	 try {
+		 pauseForTime(5000);
+		 if(waitForElement(FlashPlayer,80).isDisplayed()) {
+			 waitForElement(FlashPlayer,80).click();
+			 }
+		 }
+	 
+	 catch(NoSuchElementException ex){
+		 log.error("FlashPlayer close button is not found on the page"); 
+	 }
+	 try {
+		 if(waitForElement(PlusIcon,60).isDisplayed()) {
+			 waitForElement(PlusIcon,60).click();
+			 }
+		 }
+	 
+	 catch(NoSuchElementException ex){
+		 log.error("PlusIcon is not found on Home page"); 
+	  }
+	 }
+	else
+	 { 
+		d.until(ExpectedConditions.visibilityOf(ToDoIcon));
+		try {
+			Thread.sleep(8000);
+			 if(waitForElement(ToDoIcon,60).isDisplayed()) {
+				 waitForElement(ToDoIcon,60).click();
+				 }
+			 }
+		 
+		 catch(NoSuchElementException ex){
+			 log.error("ToDoIcon Icon is not found in Home page "); 
+		 }
+		 try {
+			 pauseForTime(3000);
+			 if(waitForElement(Create,60).isDisplayed()) {
+				 waitForElement(Create,60).click();
+				 }
+			 }
+		 
+		 catch(NoSuchElementException ex){
+			 log.error("Create button is not found in Home page "); 
+		    }
+		}
+	 try {
+		 if(waitForElement(NewApproval,60).isDisplayed()) {
+			 waitForElement(NewApproval,60).click();
+	        }
+		 }
+	  catch(NoSuchElementException ex){
+		 log.error("NewApproval option is not found in Home page "); 
+	     }
+	 try {
+		 if(waitForElement(ApprovalName,60).isDisplayed()) {
+			 ApprovalName.clear();
+             waitForElement(ApprovalName,60).sendKeys(HomePageApproval + Utilities.getCurrentTimeStamp());
+			 }
+		 }
+	 
+	 catch(NoSuchElementException ex){
+		 log.error("ApprovalName text box is not found in NewApproval Page "); 
+	 }
+	 try {
+		 if(waitForElement(ApprovalDescription,60).isDisplayed()) {
+			 ApprovalDescription.clear();
+             waitForElement(ApprovalDescription,60).sendKeys(ApprovalDes + Utilities.getCurrentTimeStamp());
+			 }
+		 }
+	 
+	 catch(NoSuchElementException ex){
+		 log.error("ApprovalDescription text box is not found in NewApproval Page "); 
+	 }
+	if(isAttachmentPresent) {
+	try {
+		 if(waitForElement(UploadFile,60).isDisplayed()) {
+			 UploadFile.click();
+			 pauseForTime(3000);
+			 Runtime.getRuntime().exec("C:\\Users\\wooqer\\Desktop\\AutoIT\\Fileupload1.exe");
+			 log.info("Attachment is added");
+             }
+		 }
+	  catch(NoSuchElementException ex){
+		 log.error("UploadFile icon  is not found in NewApproval Page "); 
+		 }
+	 }
+	  try {
+		 if(waitForElement(SelectApprover,60).isDisplayed()) {
+			 SelectApprover.click();
+             }
+		 }
+	 catch(NoSuchElementException ex){
+		 log.error("SelectApprover text box is not found in NewApproval Page "); 
+	    }
+ if(isfavpresent) {
+	   try {
+		 if(waitForElement(Fav,60).isDisplayed()) {
+			 Fav.click();
+             }
+		 }
+	 catch(Exception ex){
+		 log.error("User doesn't exist in Fav list of NewApproval Page "); 
+		 }
+	   }
+else
+	  {
+		 try {
+			 for(int i=0;i<Autouser.length;i++)
+			 {	SelectApprover.sendKeys(String.valueOf(Autouser[i]));
+			    pauseForTime(100);
+			 }
+			 d.until(ExpectedConditions.visibilityOf(Autosug));
+			 if(waitForElement(Autosug,60).isDisplayed()) {
+				 pauseForTime(3000);
+				 waitForElement(Autosug,60).click();
+				  }
+			 }
+		 catch(NoSuchElementException ex) {
+			 log.error("Autosug user is not found in the page");
+		      }
+		 }
+	 try {
+		 if(waitForElement(SaveApproval,30).isDisplayed()) {
+			 waitForElement(SaveApproval,30).click();
+           }
+		 }
+	  catch(NoSuchElementException ex){
+		 log.error("SaveApproval button is not found in NewApproval Page "); 
+	    }
+	try {
+		 if(waitForElement(Successmessage,60).isDisplayed()) {
+			 String a=Successmessage.getText();
+			 if(a.contains(HomePageApproval+ Utilities.getCurrentTimeStamp())){
+			 log.info("Approval is created successfully");
+           }
+		 }
+		 }
+	  catch(NoSuchElementException ex){
+		 log.error("Approval is not created"); 
+	    }
+	 
+	  if(iscommentrequired) {
+		  if(!isHome) 
+		  {
+         try {
+			 if(waitForElement(Pendinglist,60).isDisplayed()){
+				Pendinglist.click();
+				 }
+		}
+        catch(NoSuchElementException ex) {
+				 log.error("pending list is not found");
+			 }}
+		 try
+		 {
+		    d.until(ExpectedConditions.visibilityOf(Clickonapproval));
+			if( waitForElement(Clickonapproval,60).isDisplayed()) {
+		    waitForElement(Clickonapproval,60).click();
+			log.info("Required approval is clicked");
+		  }
+	   }
+		     catch(NoSuchElementException ex) {
+			     log.error("Approval is not found");
+			     }
+		      }
+	  try
+		 {  pauseForTime(2000);
+		    if( waitForElement(ToDocomment,60).isDisplayed()) {
+		    waitForElement(ToDocomment,60).sendKeys(Owner + Utilities.getCurrentTimeStamp());
+		    }
+	     }
+		     catch(NoSuchElementException ex) {
+			     log.error("ToDocomment text box is not found");
+			     }
+	 try
+		 {
+		    if( waitForElement(Clickcomment,60).isDisplayed()) {
+		    waitForElement(Clickcomment,60).click();
+		    log.info("Commented on approval successfully");
+		    }
+	     }
+		     catch(NoSuchElementException ex) {
+			     log.error("Comment button is not found");
+			     }
+	  
+	  return driver;
+	 }
+  }
+
+

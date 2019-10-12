@@ -1,0 +1,24 @@
+2019-05-09 16:27:06,397 INFO  [BulkUpload] Success ! Reference Number: RA-657 
+2019-05-09 16:31:17,257 ERROR [BulkUpload] Store tab is not found 
+2019-05-09 16:32:04,293 ERROR [BulkUpload] Create bulk store button is not found 
+2019-05-09 16:32:04,302 ERROR [BulkUpload] Store download option is not found 
+2019-05-09 16:34:06,673 ERROR [BulkUpload] Create bulk store button is not found 
+2019-05-09 16:35:08,178 ERROR [BulkUpload] Store download option is not found 
+2019-05-09 16:40:09,226 ERROR [BulkUpload] Create bulk store button is not found 
+2019-05-09 16:41:10,593 ERROR [BulkUpload] Store download option is not found 
+2019-06-13 14:40:09,712 INFO  [Task] ToDo icon is dispalyed and is clicked 
+2019-06-13 14:40:10,869 INFO  [Task] NewTask icon is clicked 
+2019-06-13 14:40:12,973 INFO  [Task] Task title field is clicked and entered as Automated Task Name-Complete the science assignment!16286 
+2019-06-13 14:40:15,776 INFO  [Task] Task description field is clicked and entered as Automated Descp-The first science assignmnet should be completed in 10 days from today.43095 
+2019-06-13 14:40:50,366 ERROR [Task] City dropdown is not present 
+2019-06-13 14:44:38,696 INFO  [Task] ToDo icon is dispalyed and is clicked 
+2019-06-13 14:44:39,246 INFO  [Task] NewTask icon is clicked 
+2019-06-13 14:44:41,362 INFO  [Task] Task title field is clicked and entered as Automated Task Name-Complete the science assignment!98568 
+2019-06-13 14:44:44,078 INFO  [Task] Task description field is clicked and entered as Automated Descp-The first science assignmnet should be completed in 10 days from today.18073 
+2019-06-13 14:44:47,386 INFO  [Task] this 
+2019-06-13 14:44:51,475 ERROR [Task] autoit script failed 
+2019-06-13 14:44:54,475 INFO  [Task] Attachment icon is present and file is attached. 
+2019-06-13 14:45:29,366 ERROR [Task] City dropdown is not present 
+2019-06-13 14:45:45,290 INFO  [Task] Home page icon is dispalyed and is clicked 
+2019-06-13 14:45:45,514 INFO  [Task] NewTask icon is clicked 
+2019-06-13 14:45:45,958 INFO  [Task] Create task button is clicked 

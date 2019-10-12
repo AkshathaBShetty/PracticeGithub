@@ -1,0 +1,129 @@
+<html>
+<head>
+<title>TestNG:  RegressionTest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>RegressionTest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>10/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Apr 24 17:46:26 IST 2015</td>
+</tr>
+<tr><td>Total time:</td><td>2035 seconds (2035381 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.automation.regressionsuite.ProcessEndToEndTest.processE2ETest()'><b>processE2ETest</b><br>Test class: com.automation.regressionsuite.ProcessEndToEndTest<br>Parameters: PROC_001, audit, cities, 10, single, yes, no, no, no, no, yes, no, no, no, no, no, no, Success</td>
+<td></td>
+<td>138</td>
+<td>com.automation.regressionsuite.ProcessEndToEndTest@28bb0d0d</td></tr>
+<tr>
+<td title='com.automation.regressionsuite.ProcessEndToEndTest.processE2ETest()'><b>processE2ETest</b><br>Test class: com.automation.regressionsuite.ProcessEndToEndTest<br>Parameters: PROC_002, audit, users, 10, quarterly, no, no, yes, no, 1, no, yes, no, system generated, no, Level 1, User, Success</td>
+<td></td>
+<td>239</td>
+<td>com.automation.regressionsuite.ProcessEndToEndTest@28bb0d0d</td></tr>
+<tr>
+<td title='com.automation.regressionsuite.ProcessEndToEndTest.processE2ETest()'><b>processE2ETest</b><br>Test class: com.automation.regressionsuite.ProcessEndToEndTest<br>Parameters: PROC_003, data collection, stores, 10, monthly, yes, no, no, yes, 2, yes, yes, no, user generated, no, Level 2, no, Success</td>
+<td></td>
+<td>249</td>
+<td>com.automation.regressionsuite.ProcessEndToEndTest@28bb0d0d</td></tr>
+<tr>
+<td title='com.automation.regressionsuite.ProcessEndToEndTest.processE2ETest()'><b>processE2ETest</b><br>Test class: com.automation.regressionsuite.ProcessEndToEndTest<br>Parameters: PROC_004, data collection, cities, 10, daily, no, yes, yes, yes, 3, no, no, no, approver generated, no, Level 3, User, Success</td>
+<td></td>
+<td>296</td>
+<td>com.automation.regressionsuite.ProcessEndToEndTest@28bb0d0d</td></tr>
+<tr>
+<td title='com.automation.regressionsuite.ProcessEndToEndTest.processE2ETest()'><b>processE2ETest</b><br>Test class: com.automation.regressionsuite.ProcessEndToEndTest<br>Parameters: PROC_005, checklist, users, 10, half yearly, no, no, no, no, no, no, yes, no, no, no, no, no, Success</td>
+<td></td>
+<td>93</td>
+<td>com.automation.regressionsuite.ProcessEndToEndTest@28bb0d0d</td></tr>
+<tr>
+<td title='com.automation.regressionsuite.ProcessEndToEndTest.processE2ETest()'><b>processE2ETest</b><br>Test class: com.automation.regressionsuite.ProcessEndToEndTest<br>Parameters: PROC_006, audit, cities, 10, yearly, yes, no, no, no, no, yes, yes, no, no, no, no, no, Success</td>
+<td></td>
+<td>139</td>
+<td>com.automation.regressionsuite.ProcessEndToEndTest@28bb0d0d</td></tr>
+<tr>
+<td title='com.automation.regressionsuite.ProcessEndToEndTest.processE2ETest()'><b>processE2ETest</b><br>Test class: com.automation.regressionsuite.ProcessEndToEndTest<br>Parameters: PROC_007, data collection, users, 10, cyclic, no, no, yes, no, 1, no, no, no, user generated, no, Level 1, User, Success</td>
+<td></td>
+<td>224</td>
+<td>com.automation.regressionsuite.ProcessEndToEndTest@28bb0d0d</td></tr>
+<tr>
+<td title='com.automation.regressionsuite.ProcessEndToEndTest.processE2ETest()'><b>processE2ETest</b><br>Test class: com.automation.regressionsuite.ProcessEndToEndTest<br>Parameters: PROC_008, audit, stores, 10, single, yes, no, no, yes, 2, yes, yes, no, approver generated, no, Level 1, no, Success</td>
+<td></td>
+<td>238</td>
+<td>com.automation.regressionsuite.ProcessEndToEndTest@28bb0d0d</td></tr>
+<tr>
+<td title='com.automation.regressionsuite.ProcessEndToEndTest.processE2ETest()'><b>processE2ETest</b><br>Test class: com.automation.regressionsuite.ProcessEndToEndTest<br>Parameters: PROC_009, data collection, cities, 10, daily, no, yes, yes, yes, 3, no, yes, no, system generated, no, Level 2, User, Success</td>
+<td></td>
+<td>319</td>
+<td>com.automation.regressionsuite.ProcessEndToEndTest@28bb0d0d</td></tr>
+<tr>
+<td title='com.automation.regressionsuite.ProcessEndToEndTest.processE2ETest()'><b>processE2ETest</b><br>Test class: com.automation.regressionsuite.ProcessEndToEndTest<br>Parameters: PROC_010, checklist, users, 10, quarterly, no, no, no, no, no, no, no, no, no, no, no, no, Success</td>
+<td></td>
+<td>89</td>
+<td>com.automation.regressionsuite.ProcessEndToEndTest@28bb0d0d</td></tr>
+</table><p>
+</body>
+</html>
